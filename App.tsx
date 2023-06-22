@@ -33,16 +33,16 @@ type SectionProps = PropsWithChildren<{
 function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  // useEffect(() => {
-  //   const init = async () => {
-  //     // …do multiple sync or async tasks
-  //   };
+  useEffect(() => {
+    const init = async () => {
+      // …do multiple sync or async tasks
+    };
 
-  //   init().finally(async () => {
-  //     await RNBootSplash.hide({ fade: true, duration: 500 });
-  //     // console.log("BootSplash has been hidden successfully");
-  //   });
-  // }, []);
+    init().finally(async () => {
+      await RNBootSplash.hide({ fade: true, duration: 500 });
+      // console.log("BootSplash has been hidden successfully");
+    });
+  }, []);
 
   return (
     <View style={styles.sectionContainer}>
